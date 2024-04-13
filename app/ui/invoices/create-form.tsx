@@ -134,14 +134,14 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                                 </p>
                             ))}
                     </div>
-                    {/* <div id="status-error" aria-live="polite" aria-atomic="true">
-                        {state.errors &&
-                            state.errors.status.map((initialState: string) => (
-                                <p className="mt-2 text-sm text-red-500" key={error}>
-                                    {error}
+                    <div aria-live="polite" aria-atomic="true">
+                        {state &&
+                            (
+                                <p className="mt-2 text-sm text-red-500" >
+                                    {state.message}
                                 </p>
-                            ))}
-                    </div> */}
+                            )}
+                    </div>
                 </fieldset>
             </div>
             <div className="mt-6 flex justify-end gap-4">
